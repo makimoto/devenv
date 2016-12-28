@@ -1,0 +1,17 @@
+[core]
+	editor = nvim
+	excludesfile = /Users/makimoto/.gitignore_global
+[alias]
+	stat = log --stat
+	br = branch
+	bl = blame
+	co = checkout
+	cm = checkout master
+	st = status
+	ci = commit -v
+[ghq]
+	root = ~/.ghq
+[commit]
+	gpgsign = true
+[include]
+	path = ~/.gitconfig.local
