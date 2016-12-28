@@ -9,3 +9,4 @@ remote_file "#{ENV['HOME']}/.gitignore" do
 end
 
 package 'hub'
+package 'ghq'
