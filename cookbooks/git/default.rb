@@ -7,3 +7,5 @@ end
 remote_file "#{ENV['HOME']}/.gitignore" do
   source 'files/gitignore'
 end
+
+package 'hub'
