@@ -1,8 +1,8 @@
 #!/bin/sh -x
 set -e
 
-mitamae_version="v1.3.1"
-mitamae_sha256="8158e9f4913ecf7bcfb3a46a4f9913c160db849cb55866cd78426e2c42894d7f"
+mitamae_version="v1.3.2"
+mitamae_sha256="1775a7600e3c2464f9a33f62505c11b5691df9b0ecd36840fb587bb9bc04b295"
 
 current_version="$($HOME/bin/mitamae version | cut -d" " -f2)"
 
@@ -26,4 +26,4 @@ fi
 tar xvzf mitamae.tar.gz
 rm mitamae.tar.gz
 chmod +x mitamae-x86_64-darwin
-ln -s mitamae-x86_64-darwin mitamae
+ln -fs mitamae-x86_64-darwin mitamae
