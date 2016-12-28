@@ -1,6 +1,7 @@
+# vim: set ft=gitconfig
 [core]
 	editor = nvim
-	excludesfile = /Users/makimoto/.gitignore_global
+	excludesfile = ~/.gitignore
 [alias]
 	stat = log --stat
 	br = branch
