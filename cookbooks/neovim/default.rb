@@ -1,5 +1,5 @@
 execute "brew tap neovim/neovim" do
-  not_if "brew tap | grep neovim/neovim"
+  not_if "test -e `brew --prefix`/bin/nvim"
 end
 
 package 'neovim'
