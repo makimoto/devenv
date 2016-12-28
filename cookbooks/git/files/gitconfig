@@ -14,6 +14,7 @@
 	root = ~/.ghq
 [commit]
 	gpgsign = true
+	verbose = true
 [include]
 	path = ~/.gitconfig.local
 [color]
