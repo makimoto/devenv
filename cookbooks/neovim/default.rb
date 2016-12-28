@@ -4,8 +4,9 @@ end
 
 package 'neovim'
 
+execute "mkdir -p #{ENV['HOME']}/.config/nvim"
 remote_file "#{ENV['HOME']}/.config/nvim/init.vim" do
-  source "files/neovim/init.vim"
+  source "files/nvim/init.vim"
 end
 
 execute "Install neovim" do
