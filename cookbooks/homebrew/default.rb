@@ -10,4 +10,5 @@ end
 
 git '/opt/brew' do
   repository 'https://github.com/Homebrew/brew.git'
+  not_if 'test -f /opt/brew/bin/brew'
 end
