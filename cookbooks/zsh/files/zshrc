@@ -23,7 +23,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt \
-  always_last_prompt
+  always_last_prompt \
   append_history \
   auto_menu \
   auto_param_keys \
@@ -52,12 +52,16 @@ bindkey "^N" history-beginning-search-forward-end
 
 bindkey -e
 
-pgrep -q gpg-agent || eval $(`brew --prefix`/bin/gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
-[ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
-export GPG_AGENT_INFO
-export GPG_TTY=`tty`
+if [ -f "`which gpg-agent`" -a -f "`which gpg`" ];then
+  pgrep -q gpg-agent || eval $(`brew --prefix`/bin/gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
+  [ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
+  export GPG_AGENT_INFO
+  export GPG_TTY=`tty`
+fi
 
 for i in ${HOME}/.zsh/*.zsh
   source $i
 
-source $HOME/.zshrc.local
+if [ -f ${HOME}/.zshrc.local ];then
+  source $HOME/.zshrc.local
+fi
