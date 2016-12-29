@@ -10,4 +10,6 @@ zstyle ':completion:*' use-cache true
 zstyle ':completion::complete:*' cache-path $HOME/.cache
 zstyle ':completion:*' group-name ''
 
+zmodload zsh/complist
 autoload -Uz compinit; compinit
+bindkey -M menuselect '^o' accept-and-infer-next-history
