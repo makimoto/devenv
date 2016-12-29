@@ -1,0 +1,63 @@
+export GOPATH=$HOME/go
+export PATH=$HOME/bin:/opt/brew/bin:$PATH:$GOPATH/bin:/Users/makimoto/.cargo/bin
+
+zstyle :compinstall filename '/Users/makimoto/.zshrc'
+zstyle '*' single-ignored show
+
+autoload -Uz colors; colors
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '|%b'
+zstyle ':vcs_info:*' actionformats '|%b|%a'
+
+precmd () {
+  psvar=()
+  vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+  PROMPT="[%.$psvar]%# "
+}
+
+autoload history-search-end
+
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt \
+  always_last_prompt
+  append_history \
+  auto_menu \
+  auto_param_keys \
+  auto_param_slash \
+  auto_pushd \
+  autocd \
+  extended_glob \
+  extended_history \
+  hist_ignore_all_dups \
+  hist_ignore_space \
+  hist_reduce_blanks \
+  magic_equal_subst \
+  mark_dirs \
+  menu_complete \
+  no_beep \
+  notify \
+  pushd_ignore_dups \
+  share_history \
+
+
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+
+bindkey -e
+
+pgrep -q gpg-agent || eval $(`brew --prefix`/bin/gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
+[ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
+export GPG_AGENT_INFO
+export GPG_TTY=`tty`
+
+for i in ${HOME}/.zsh/*.zsh
+  source $i
+
+source $HOME/.zshrc.local
