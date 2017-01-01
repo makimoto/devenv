@@ -27,6 +27,7 @@ set laststatus=2
 set wildmode=list:longest
 set hidden
 set autoread
+set noincsearch
 
 set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
@@ -35,8 +36,8 @@ let g:dein#install_progress_type = 'title'
 let g:dein#enable_notification = 1
 
 let s:dein_dir = expand('~/.config/nvim/dein')
-
 let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
+
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_file])
   call dein#load_toml(s:toml_file)
@@ -50,3 +51,5 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+nnoremap <ESC><ESC> :nohl<CR>
