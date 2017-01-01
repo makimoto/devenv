@@ -36,17 +36,10 @@ let g:dein#enable_notification = 1
 
 let s:dein_dir = expand('~/.config/nvim/dein')
 
+let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
-  call dein#begin(expand('~/.config/nvim/dein'))
-
-  call dein#add('Shougo/dein.vim')
-  call dein#add('tpope/vim-rails')
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-  call dein#add('cespare/vim-toml')
-  call dein#add('rust-lang/rust.vim')
-  call dein#add('itchyny/lightline.vim')
-  call dein#add('tpope/vim-fugitive')
-
+  call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_file])
+  call dein#load_toml(s:toml_file)
   call dein#end()
   call dein#save_state()
 endif
