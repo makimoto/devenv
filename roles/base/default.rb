@@ -1,4 +1,5 @@
 include_cookbook 'homebrew'
 include_cookbook 'git'
+include_cookbook 'rust'
 include_cookbook 'neovim'
 include_cookbook 'zsh'
