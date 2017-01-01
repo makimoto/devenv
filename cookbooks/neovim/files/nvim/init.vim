@@ -53,3 +53,9 @@ filetype plugin indent on
 syntax enable
 
 nnoremap <ESC><ESC> :nohl<CR>
+
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = expand('~/.cargo/bin/rustfmt')
+let g:racer_cmd = expand('~/.cargo/bin/racer')
+let g:racer_experimental_completer = 1
+let $RUST_SRC_PATH=expand('~/src/rust/src')
