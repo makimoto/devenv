@@ -59,7 +59,7 @@ if [ -f "`which gpg-agent`" -a -f "`which gpg`" ];then
   export GPG_TTY=`tty`
 fi
 
-for i in ${HOME}/.zsh/*.zsh
+for i in ${HOME}/.zsh.d/*.zsh
   source $i
 
 if [ -f ${HOME}/.zshrc.local ];then
