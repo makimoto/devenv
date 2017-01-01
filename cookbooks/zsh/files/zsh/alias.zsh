@@ -1,7 +1,9 @@
 alias vim=nvim
 alias vi=vim
+alias v=vim
 alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -al'
 alias git=hub
 alias gc='git commit'
+alias gst='git status'
