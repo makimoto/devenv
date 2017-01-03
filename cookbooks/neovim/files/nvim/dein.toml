@@ -25,3 +25,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'fatih/vim-go'
