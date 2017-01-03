@@ -60,8 +60,7 @@ let g:racer_cmd = expand('~/.cargo/bin/racer')
 let g:racer_experimental_completer = 1
 let $RUST_SRC_PATH=expand('~/src/rust/src')
 
-let $PYENV_VERSION='3.6.0'
-let g:python3_host_prog = expand('~/.pyenv/shims/python')
+let g:python3_host_prog = expand('~/.pyenv/shims/python3')
 let g:deoplete#enable_at_startup = 1
 
 let g:go_highlight_functions = 1
