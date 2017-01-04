@@ -28,3 +28,9 @@ repo = 'tpope/vim-rails'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'neomake/neomake'
+
+[[plugins]]
+repo = 'benjie/neomake-local-eslint.vim'

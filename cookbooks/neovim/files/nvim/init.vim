@@ -56,6 +56,7 @@ nnoremap <ESC><ESC> :nohl<CR>
 
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = expand('~/.cargo/bin/rustfmt')
+let g:rustfmt_fail_silently = 1
 let g:racer_cmd = expand('~/.cargo/bin/racer')
 let g:racer_experimental_completer = 1
 let $RUST_SRC_PATH=expand('~/src/rust/src')
@@ -70,3 +71,6 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+autocmd! BufWritePost,BufEnter * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
