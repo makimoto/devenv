@@ -7,3 +7,4 @@ alias la='ls -al'
 alias git=hub
 alias gc='git commit'
 alias gst='git status'
+alias gcm='git checkout master'
