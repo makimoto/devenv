@@ -8,3 +8,5 @@ alias git=hub
 alias gc='git commit'
 alias gst='git status'
 alias gcm='git checkout master'
+alias b='bundle exec'
+alias bu='bundle install'
