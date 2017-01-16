@@ -34,3 +34,6 @@ repo = 'neomake/neomake'
 
 [[plugins]]
 repo = 'benjie/neomake-local-eslint.vim'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
