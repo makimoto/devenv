@@ -37,3 +37,6 @@ repo = 'benjie/neomake-local-eslint.vim'
 
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
