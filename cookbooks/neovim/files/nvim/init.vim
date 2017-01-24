@@ -74,3 +74,13 @@ let g:go_fmt_command = "goimports"
 
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+
+nnoremap [denite] <Nop>
+nmap <C-u> [denite]
+nnoremap <silent> [denite]<C-g>  :<C-u>Denite grep -buffer-name=search-buffer-denite<CR>
+nnoremap <silent> [denite]<C-f>  :<C-u>Denite file_rec -buffer-name=search-buffer-denite<CR>
+nnoremap <silent> [denite]<C-d>  :<C-u>Denite directory_rec -buffer-name=search-buffer-denite<CR>
+
+nnoremap <silent> [denite]<C-r> :<C-u>Denite -resume -buffer-name=search-buffer-denite<CR>
+nnoremap <silent> [denite]<C-n> :<C-u>Denite -resume -buffer-name=search-buffer-denite -select=+1 -immediately<CR>
+nnoremap <silent> [denite]<C-p> :<C-u>Denite -resume -buffer-name=search-buffer-denite -select=-1 -immediately<CR>
