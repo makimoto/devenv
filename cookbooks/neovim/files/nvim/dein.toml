@@ -40,3 +40,6 @@ repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
