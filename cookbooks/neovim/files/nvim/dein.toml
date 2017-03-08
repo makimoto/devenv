@@ -43,3 +43,6 @@ repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
